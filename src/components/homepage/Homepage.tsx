@@ -21,15 +21,14 @@ export const Homepage = ({ about, setAbout }) => {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="w-full h-screen flex justify-center items-center absolute"
           >
-            <Dots />
-            {/* <motion.div className="caixa relative flex flex-col bg-[#121217] justify-center items-center rounded-xl p-12">
+            <motion.div className="caixa relative flex flex-col bg-[#121217] justify-center items-center rounded-xl p-12">
               <motion.div className="flex mb-12">
                 <motion.h1 className="font-bold text-primary text-5xl">
                   I'm a web developer
                 </motion.h1>
               </motion.div>
               <Start isTrue={isTrue} setIsTrue={setIsTrue} />
-            </motion.div> */}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
