@@ -1,0 +1,100 @@
+.dot1 {
+  animation: bounce 1.65s infinite ease-in-out;
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation: bounce 1.65s infinite ease-in-out;
+  animation-delay: 0.25s;
+}
+
+.dot3 {
+  animation: bounce 1.65s infinite ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --clr-1-red: 213;
+  --clr-1-green: 232;
+  --clr-1-blue: 255;
+  --clr-2-opacity: 0.05;
+  --clr-3-opacity: 0.01;
+  --clr-1: rgb(var(--clr-1-red), var(--clr-1-green), var(--clr-1-blue));
+  --clr-2: rgba(
+    var(--clr-1-red),
+    var(--clr-1-green),
+    var(--clr-1-blue),
+    var(--clr-2-opacity)
+  );
+  --clr-3: rgba(
+    var(--clr-1-red),
+    var(--clr-1-green),
+    var(--clr-1-blue),
+    var(--clr-3-opacity)
+  );
+}
+
+.caixa::before,
+.caixa::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1)
+  );
+  animation: Borda 6s linear infinite;
+  border-radius: 16px;
+}
+
+@keyframes Borda {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.caixa::after {
+  filter: blur(60px);
+}
+
+.arrow {
+  stroke: #505050;
+  transform-origin: center;
+  transform: scale(1);
+  transition: transform 0.35s ease-in-out;
+  transition-delay: 1000;
+}
+
+.arrow:hover {
+  stroke: var(--clr-1);
+  transform: scale(1.15);
+  filter: drop-shadow(0px 0px 0.75px var(--clr-1));
+}
