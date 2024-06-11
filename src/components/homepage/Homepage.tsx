@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Start } from "./Start";
 import { motion, AnimatePresence } from "framer-motion";
 import "../components.css";
-import Dots from "./Dots";
 
 export const Homepage = ({ about, setAbout }) => {
   const [isTrue, setIsTrue] = useState(true);

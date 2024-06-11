@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const AboutMeText = () => {
   return (
     <>
-      <div className="p-32 flex justify-evenly items-center">
+      <div className="p-32 px-40 pt-0 flex justify-evenly items-center">
         <AnimatePresence>
           <motion.div className="flex flex-col w-full">
             <motion.div className="flex gap-x-16 w-full">
@@ -26,16 +26,16 @@ export const AboutMeText = () => {
                 </motion.svg>
               </motion.div>
               <motion.div>
-                <motion.p className="text-4xl font-bold font-mono text-zinc-300 h-full w-full flex justify-center items-center">
-                  Web Developer
+                <motion.p className="text-4xl font-thin font-mono text-zinc-300 h-full w-full flex justify-center items-center">
+                  React
                 </motion.p>
               </motion.div>
             </motion.div>
             <motion.div className="flex justify-start items-center gap-x-12 flex-row-reverse"> 
-              <motion.div className="rounded-full w-fit flex justify-center items-center bg-[#242424] p-20">
+              <motion.div className="rounded-full w-fit flex justify-center items-center bg-[#242424] p-12">
                 <motion.svg
-                  width="200px"
-                  height="200px"
+                  width="100px"
+                  height="100px"
                   viewBox="-50 0 300 300"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +73,8 @@ export const AboutMeText = () => {
                 </motion.svg>
               </motion.div>
               <motion.div>
-                <motion.p className="text-4xl font-mono font-bold text-zinc-300">
-                  Web Designer
+                <motion.p className="text-4xl font-mono font-thin text-zinc-300">
+                  Figma
                 </motion.p>
               </motion.div>
             </motion.div>
