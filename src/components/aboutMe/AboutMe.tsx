@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence, delay, easeInOut } from "framer-motion";
-import { Navbar } from "../Navbar";
-import { AboutMeText } from "./AboutMeText";
+import { Navbar } from "../navbar/Navbar";
+import { Skills } from "./Skills";
 
 export const AboutMe = ({ about, setAbout }) => {
-  if (about === true) document.body.style.overflow = "hidden";
-  else document.body.style.overflow = "visible";
+  if (about === true) document.body.style.overflowX = "hidden";
+  else document.body.style.overflowX = "visible";
 
   return (
     <>
@@ -19,7 +19,7 @@ export const AboutMe = ({ about, setAbout }) => {
               transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
             >
               <Navbar />
-              <AboutMeText />
+              <Skills />
             </motion.div>
           )}
         </AnimatePresence>
